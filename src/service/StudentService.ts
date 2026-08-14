@@ -1,4 +1,4 @@
-import { EtudiantRepository } from "../repository/etudiant.repository";
+import { EtudiantRepository } from "../repository/etudiant.repository.";
 
 export class EtudiantService {
 
