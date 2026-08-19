@@ -11,12 +11,11 @@ export class AuthService {
       throw new Error("Identifiants invalides");
     }
 
-    // Dans un projet réel, utilise bcrypt : await bcrypt.compare(passwordCandidat, student.password)
     if (student.password !== passwordCandidat) {
       throw new Error("Identifiants invalides");
     }
 
-    // Génération du token
+    // generating token
     const token = jwt.sign(
       { id: student.id }, 
       process.env.JWT_SECRET || "secret", 

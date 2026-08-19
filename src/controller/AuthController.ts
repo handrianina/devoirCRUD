@@ -1,10 +1,9 @@
-import { Request, Response } from "express";
+import type { Request, Response } from "express";
 import { AuthService } from "../service/AuthService.js";
 
 export class AuthController {
   private authService = new AuthService();
 
-  // Utilisation d'une fonction fléchée pour préserver le contexte 'this'
   public login = async (req: Request, res: Response): Promise<void> => {
     try {
       const { email, password } = req.body;
